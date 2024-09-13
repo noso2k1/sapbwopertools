@@ -2,10 +2,8 @@ CLASS ycl_bw_pc_tool_app DEFINITION PUBLIC FINAL CREATE PUBLIC.
 
   PUBLIC SECTION.
 
-*    INTERFACES if_serializable_object .
     INTERFACES z2ui5_if_app .
 
-*    DATA client TYPE REF TO z2ui5_if_client.
     TYPES: BEGIN OF t_s_joblist,
              jobname    TYPE btcjob,
              jobcount   TYPE btcjobcnt,
