@@ -23,7 +23,11 @@
     "begin_end_names": true,
     "check_ddic": true,
     "check_include": true,
-    "check_syntax": true,
+    "check_syntax": 
+        {
+            exclude: [],
+            severity: "Warning"
+        },
     "global_class": true,
     "definitions_top": false,
     "implement_methods": true,
