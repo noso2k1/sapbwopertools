@@ -121,8 +121,16 @@ CLASS ycl_bw_pc_tool_app DEFINITION PUBLIC FINAL CREATE PUBLIC.
     DATA check_initialized TYPE abap_bool.
     DATA client TYPE REF TO z2ui5_if_client.
 
+    "! <p class="shorttext synchronized" lang="en">App Initialization</p>
+    "!
     METHODS on_init.
+
+    "! <p class="shorttext synchronized" lang="en">App events</p>
+    "!
     METHODS on_event.
+
+    "! <p class="shorttext synchronized" lang="en">App view</p>
+    "!
     METHODS on_view.
 
 

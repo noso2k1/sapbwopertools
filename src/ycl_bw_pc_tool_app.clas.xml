@@ -11,6 +11,23 @@
     <FIXPT>X</FIXPT>
     <UNICODE>X</UNICODE>
    </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>ON_EVENT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>App events</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ON_INIT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>App Initialization</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ON_VIEW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>App view</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
   </asx:values>
  </asx:abap>
 </abapGit>
