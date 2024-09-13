@@ -376,11 +376,14 @@ CLASS ycl_bw_pc_tool_app IMPLEMENTATION.
 
 
   METHOD on_event.
+
     CASE client->get( )-event.
       WHEN 'ON_BTN_INCLUDE'.
 
         DATA(o_pc_chain_list) = NEW t_t_chain_id_list( FOR wa IN ui_model WHERE ( selected = 'X' ) ( chain_id = wa-chain_id ) ).
+
         DATA(retcode) = add_pc_to_include( EXPORTING it_chain_id = o_pc_chain_list->* i_include_name = pc_include ).
+
         refresh_model( i_refresh = 'X' i_user = pc_include ).
         client->view_model_update( ).
         client->message_toast_display( 'Action completed. Check the messages.' ).
@@ -398,6 +401,7 @@ CLASS ycl_bw_pc_tool_app IMPLEMENTATION.
       WHEN 'ON_BTN_SCHEDULE'.
 
         DATA(o_sched) = NEW t_t_chain_id_list( FOR wa IN ui_model WHERE ( selected = 'X' ) ( chain_id = wa-chain_id job_status = wa-job_status ) ).
+
         schedule_unschedule_chains( chain_id_list = o_sched->* action = 'SCHEDULE' ).
         refresh_model( i_refresh = 'X' i_user = pc_include ).
         client->view_model_update( ).
@@ -406,6 +410,7 @@ CLASS ycl_bw_pc_tool_app IMPLEMENTATION.
       WHEN 'ON_BTN_UNSCHEDULE'.
 
         DATA(o_unsched) = NEW t_t_chain_id_list( FOR wa IN ui_model WHERE ( selected = 'X' ) ( chain_id = wa-chain_id job_status = wa-job_status ) ).
+
         schedule_unschedule_chains( chain_id_list = o_unsched->* action = 'UNSCHEDULE' ).
         refresh_model( i_refresh = 'X' i_user = pc_include ).
         client->view_model_update( ).
