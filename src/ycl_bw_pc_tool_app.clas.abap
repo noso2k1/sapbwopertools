@@ -554,15 +554,15 @@ CLASS ycl_bw_pc_tool_app IMPLEMENTATION.
 
     DATA(head_toolbar) = page->sub_header( )->overflow_toolbar( ).
     head_toolbar->toolbar_spacer(
-        )->button( text = 'Refresh'
-                   icon = 'sap-icon://refresh'
+        )->button( text  = 'Refresh'
+                   icon  = 'sap-icon://refresh'
                    press = client->_event( 'ON_BTN_REFRESH_STATUS' )
-        )->checkbox( text = 'Show standard PCs'
+        )->checkbox( text     = 'Show standard PCs'
                      selected = client->_bind_edit( show_std_pc )
-                     select = client->_event( 'ON_CHK_SHOW_STD' )
-        )->checkbox( text = 'Show only PCs in include'
+                     select   = client->_event( 'ON_CHK_SHOW_STD' )
+        )->checkbox( text     = 'Show only PCs in include'
                      selected = client->_bind_edit( show_only_include )
-                     select = client->_event( 'ON_CHK_SHOW_STD' )
+                     select   = client->_event( 'ON_CHK_SHOW_STD' )
         )->label( text = 'RSPCM Include' labelfor = 'cmbInclude' ).
     DATA(cmb_include) = head_toolbar->combobox( id = `cmbInclude`
                      selectedkey = client->_bind_edit( pc_include )
