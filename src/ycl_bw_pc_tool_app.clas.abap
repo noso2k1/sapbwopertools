@@ -257,14 +257,17 @@ CLASS ycl_bw_pc_tool_app IMPLEMENTATION.
       <model>-run_status_state = SWITCH string( <model>-run_status WHEN 'G' THEN 'Success'
                                                                    WHEN 'R' THEN 'Error'
                                                                    WHEN 'X' THEN 'None'
+                                                                   WHEN 'A' THEN 'Warning'
                                                                    ELSE          'None').
       <model>-run_status_text  = SWITCH string( <model>-run_status WHEN 'G' THEN 'Completed'
                                                                    WHEN 'R' THEN 'Error'
                                                                    WHEN 'X' THEN ''
+                                                                   WHEN 'A' THEN 'Active'
                                                                    WHEN ''  THEN '').
       <model>-run_status_icon  = SWITCH string( <model>-run_status WHEN 'G' THEN 'sap-icon://sys-enter-2'
                                                                    WHEN 'R' THEN 'sap-icon://error'
                                                                    WHEN 'X' THEN ''
+                                                                   WHEN 'A' THEN 'sap-icon://alert'
                                                                    WHEN ''  THEN '').
       <model>-job_status_icon = SWITCH string( <model>-job_status  WHEN '' THEN ''
                                                                    ELSE         'sap-icon://accept' ).
